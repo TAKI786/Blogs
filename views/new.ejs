@@ -1,0 +1,33 @@
+<%- include ('partials/header'); -%>
+
+
+  <div style="padding-top: 100px;">
+<h2 style="text-align: center; font-weight: 700;"> New Blog</h2>
+
+ <div style="width: 40%; margin: 45px auto;">
+
+		<form action="/blogs" method="POST">
+			
+			<div class="form-group">
+			<div>
+			<lable>Blog Title</lable></div>
+			<input class="form-control" type="text" placeholder="Blog Title" name="blog[title]" required></div>
+
+			<div class="form-group">
+			<div>
+			<lable>Image</lable></div>
+			<input class="form-control" type="text" placeholder="image URL" name="blog[image]" required></div>
+
+			<div class="form-group">
+			<div>
+			<lable>Blog Content</lable></div>
+			<textarea name="blog[body]" style="height:50%; width:100%"  required></textarea>
+			</div>
+			<div class="form-group">
+
+			</div>
+			<div class="form-group"><button class="btn btn-lg btn-block btn-primary">Submit!</button> </div>
+		</form>
+
+</div>
+<%- include ('partials/footer'); -%>

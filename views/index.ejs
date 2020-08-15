@@ -1,0 +1,37 @@
+<%- include ('partials/header'); -%>
+
+<div style="padding-top: 50px;">
+<h3 style="text-align: center; font-weight: 700;font-size: 50px;font-family: initial;">
+BLOGS
+</h3>
+
+	<div class ="row text-center" style="display: flex; flex-wrap: wrap;">
+	
+	<% for(var i=0;i<blogs.length;i++){ %>
+	
+		<div class="col-md-4 col-sm-6" style="color: #1e3b6c">
+	
+	   		<div class ="thumbnail">
+	
+	   			<img src = "<%= blogs[i].image %>" style="height: 180px; width: 220px; border-radius: 25px; padding: inherit;">
+	
+	   			<div class="caption">
+	   				<h4> <%= blogs[i].title %> </h4>
+	   			</div>
+					
+	   				<p style="font-family: Arial; font-weight: 800;"> <%= blogs[i].created.toDateString() %></p>
+
+	   				<p><%- blogs[i].body.substring(0,125)%> ..... </p>
+
+	   		     	<a href="/blogs/<%= blogs[i]._id %>" class="btn btn-primary">More info</a>
+	
+	   		</div>
+	
+		</div>	
+	
+	<% } %>
+    
+    </div>
+
+
+<%- include ('partials/footer'); -%>
